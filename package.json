@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel ./src/html/index.html -p 4200 --open",
+    "build": "rmdir dist /s && parcel build ./src/html/index.html --no-minify -d dist/ --public-url"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,8 @@
     "url": "https://github.com/Meraseu/parceljs/issues"
   },
   "homepage": "https://github.com/Meraseu/parceljs#readme",
-  "dependencies": {
-    "axios": "^0.17.1"
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.15.2"
   }
 }

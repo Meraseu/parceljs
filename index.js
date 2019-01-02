@@ -1,7 +1,7 @@
-// const parcel = require('./parcel');
-import { parcel } from './parcel';
+import { Tab } from './components/tab';
 
-parcel.getOne()
-    .then(joke => {
-        document.querySelector('.name').innerHTML = joke
-    });
+var tab = new Tab(document.querySelector('.tabs'), {
+    callback : function(obj) {
+        console.log(obj.selectedIndex);
+    }
+});
